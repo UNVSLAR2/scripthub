@@ -1,0 +1,135 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "UNVRSAL",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "artvip's and adam's hub",
+   LoadingSubtitle = "by adam and artvip",
+    ElementBackground = Color3.fromRGB(35, 35, 35), -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   
+    DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "adamandartviphub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "discord.gg/y8N9NKS6", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Key System",
+      Subtitle = "",
+      Note = "join the discord for the key discord.gg/y8N9NKS6", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"QyusdtfgeE2DrijR"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("Universal", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite Yeild",
+   Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Walkspeed",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "Walkspeed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+local Slider = MainTab:CreateSlider({
+   Name = "Jump Power",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "Jump Power",
+   CurrentValue = 50,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+   end,
+})
+
+local MainTab = Window:CreateTab("MM2", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Execute MM2 Script",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite Yield (Optional)",
+   Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end,
+})
+
+local MainTab = Window:CreateTab("Fisch", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Execute Fisch Script",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+   end,
+})
+
+local MainTab = Window:CreateTab("RIVALS *gun game not football*", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Execute RIVALS Script",
+   Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/zeynwq/main/main/rivals1'),true))()
+   end,
+})
+
+local MainTab = Window:CreateTab("Bloxfruits", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Execute Bloxfruits Script",
+   Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))() 
+   end,
+})
+
+local MainTab = Window:CreateTab("Grace", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Execute Grace Script",
+   Callback = function()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/hassanxzayn-lua/NEOXHUBMAIN/refs/heads/main/Grace"))()  
+   end,
+})
+
+local MainTab = Window:CreateTab("Brookhaven", nil)
+local MainSection = MainTab:CreateSection("just use infinite yield so yeh")
+
+local Button = MainTab:CreateButton({
+   Name = "Execute Brookhaven Script",
+   Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()     
+   end,
+})
