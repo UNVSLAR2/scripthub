@@ -133,3 +133,13 @@ local Button = MainTab:CreateButton({
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()     
    end,
 })
+
+local MainTab = Window:CreateTab("Gag", nil)
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "Execute Grow a Garden Script",
+   Callback = function()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+   end,
+})
